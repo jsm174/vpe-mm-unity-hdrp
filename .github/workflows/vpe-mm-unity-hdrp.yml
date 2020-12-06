@@ -19,18 +19,18 @@ jobs:
         uses: satackey/action-google-drive@v1
         with:
            skicka-tokencache-json: ${{ secrets.SKICKA_TOKENCACHE_JSON }}
-           download-from: /VisualPinball.Engine/vpe-mm-unity-hdrp/Assets.zip
+           download-from: /VisualPinball.Engine/vpe-mm-unity/assets-hdrp.zip
            download-to: ./
            google-client-id: ${{ secrets.GOOGLE_CLIENT_ID }}
            google-client-secret: ${{ secrets.GOOGLE_CLIENT_SECRET }}
       - name: Uncompress assets
         run: |
-           unzip Assets.zip -d ./vpe-mm-unity-hdrp/Assets
+           unzip assets-hdrp.zip -d ./vpe-mm-unity-hdrp/Assets
       - name: Checkout VisualPinball.Engine
         uses: actions/checkout@v2
         with:
            repository: freezy/VisualPinball.Engine
-           ref: feature/wpc_emu_latest_rp
+           ref: feature/wpc_emu_latest
            path: VisualPinball.Engine
       - name: Checkout VisualPinball.Unity.Hdrp
         uses: actions/checkout@v2
@@ -77,18 +77,18 @@ jobs:
         uses: satackey/action-google-drive@v1
         with:
            skicka-tokencache-json: ${{ secrets.SKICKA_TOKENCACHE_JSON }}
-           download-from: /VisualPinball.Engine/vpe-mm-unity-hdrp/Assets.zip
+           download-from: /VisualPinball.Engine/vpe-mm-unity/assets-hdrp.zip
            download-to: ./
            google-client-id: ${{ secrets.GOOGLE_CLIENT_ID }}
            google-client-secret: ${{ secrets.GOOGLE_CLIENT_SECRET }}
       - name: Uncompress assets
         run: |
-           unzip Assets.zip -d ./vpe-mm-unity-hdrp/Assets
+           unzip assets-hdrp.zip -d ./vpe-mm-unity-hdrp/Assets
       - name: Checkout VisualPinball.Engine
         uses: actions/checkout@v2
         with:
            repository: freezy/VisualPinball.Engine
-           ref: feature/wpc_emu_latest_rp
+           ref: feature/wpc_emu_latest
            path: VisualPinball.Engine
       - name: Checkout VisualPinball.Unity.Hdrp
         uses: actions/checkout@v2
